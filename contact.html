@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Precious Ndegwa</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; background: #f9f9f9; }
+        fieldset { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; background: white; }
+        legend { font-weight: bold; font-size: 1.1em; padding: 0 10px; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        textarea { resize: vertical; }
+        .checkbox-group { display: flex; align-items: center; margin-top: 15px; }
+        .checkbox-group input { width: auto; margin-right: 10px; }
+        .checkbox-group label { margin-top: 0; font-weight: normal; }
+        button { background: #2d6a4f; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%; margin-top: 10px; }
+        button:hover { background: #1b4332; }
+    </style>
+</head>
+<body>
+    <h1>Contact Me</h1>
+    <p><a href="index.html">← Back to About Me</a></p>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+            <label for="phone">Phone (Optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+254 712 345678">
+        </fieldset>
+
+        <fieldset>
+            <legend>Message Details</legend>
+
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Choose a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="feedback">Feedback</option>
+            </select>
+
+            <label for="message">Message * (min 50 characters)</label>
+            <textarea id="message" name="message" rows="6" placeholder="Type your message here..." minlength="50" required></textarea>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to newsletter</label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
